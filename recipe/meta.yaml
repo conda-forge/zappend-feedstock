@@ -42,7 +42,7 @@ test:
 
 about:
   home: https://bcdev.github.io/zappend
-  summary: Tool for creating and updating a Zarr datacube from smaller slices
+  summary: Tool for creating and updating Zarr datacubes from smaller slices
   license: MIT
   license_file: LICENSE
 
