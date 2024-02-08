@@ -7,7 +7,7 @@ Home: https://bcdev.github.io/zappend
 
 Package license: MIT
 
-Summary: Tool for creating and updating a Zarr datacube from smaller slices
+Summary: Tool for creating and updating Zarr datacubes from smaller slices
 
 Current build status
 ====================
