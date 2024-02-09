@@ -27,6 +27,7 @@ requirements:
     - dask-core
     - fsspec
     - jsonschema
+    - numcodecs
     - numpy
     - pyyaml
     - xarray
