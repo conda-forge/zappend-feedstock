@@ -1,5 +1,5 @@
 {% set name = "zappend" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e18af8a5110d15f3df8e066c902e6b42b45df335ed4eb1f1facb566bbb536f12
+  sha256: 7679f76627a8e66444e1774a456d30bd1ec1f20c71e9159e6a00a7d295be96e0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   entry_points:
     - zappend = zappend.cli:zappend
 
@@ -27,6 +27,7 @@ requirements:
     - dask-core
     - fsspec
     - jsonschema
+    - numcodecs
     - numpy
     - pyyaml
     - xarray
