@@ -1,5 +1,5 @@
 {% set name = "zappend" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 62799d150c0f42ee25a1cb419cd0ef2b76279dcfc6eb7308701a0ff17e3723e2
+  sha256: a27b6d369012952d002174a81f1e51c15e7cfa5d6ea28476349720b5bf5ea20a
 
 build:
   noarch: python
