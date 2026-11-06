@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.11" %}
 {% set name = "zappend" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ec4f80fca8b36e1a442f007f1fd8d7fe792e1d741c267e595a5de95649a2fdd4
+  sha256: 4237a7b2d0f85a97e83957d914e7b85f17bb05663c0f3689e4627ed36b8f203e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   entry_points:
     - zappend = zappend.cli:zappend
 
@@ -25,14 +25,14 @@ requirements:
   run:
     - python >={{ python_min }}
     - click
-    - dask-core
+    - dask
     - fsspec
     - jsonschema
     - numcodecs
     - numpy
     - pyyaml
     - xarray
-    - zarr
+    - zarr >=3,<4
 
 test:
   imports:
@@ -54,7 +54,6 @@ extra:
     - konstntokas
     - forman
     - pont-us
-    - ruchimotwaniBC
     - TejasMorbagal
     - thomasstorm
     - TonioF
